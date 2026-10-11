@@ -1,0 +1,47 @@
+{
+  "standard": "ERC-8004",
+  "version": "1.0.0",
+  "agent_id": "web4-autonomous-economic-agent",
+  "agent_name": "Web4 Autonomous Economic Agent",
+  "owner_address": "0x59F7209230870f81514564e7E4AeBd1bA6cA52e3",
+  "supported_chains": [
+    { "chain_id": 8453, "name": "Base", "currency": "ETH/USDC" },
+    { "chain_id": 137, "name": "Polygon", "currency": "POL/USDC" },
+    { "chain_id": 100, "name": "Gnosis", "currency": "xDAI/USDC" }
+  ],
+  "endpoints": {
+    "protocol": "x402-http",
+    "discovery": "/.well-known/ai-agent.json",
+    "agent_card": "/.well-known/agent-card.json",
+    "openapi": "/openapi.json",
+    "services": {
+      "security_audit": "/api/v1/audit",
+      "test_generation": "/api/v1/generate-tests",
+      "market_forecast": "/api/v1/forecast"
+    }
+  },
+  "capabilities": [
+    {
+      "id": "security_audit",
+      "type": "code_analysis",
+      "pricing": { "amount": "2.00", "currency": "USDC" },
+      "description": "Static & semantic security analysis for Solidity, JavaScript, and Python codebases."
+    },
+    {
+      "id": "test_generation",
+      "type": "code_synthesis",
+      "pricing": { "amount": "1.00", "currency": "USDC" },
+      "description": "Automated regression test suite generation with 100% assertion coverage."
+    },
+    {
+      "id": "market_forecast",
+      "type": "predictive_intelligence",
+      "pricing": { "amount": "0.50", "currency": "USDC" },
+      "description": "Bayesian probability estimation for decentralized prediction markets and oracle feeds."
+    }
+  ],
+  "verification": {
+    "type": "cryptographic_signature",
+    "public_key": "0x59F7209230870f81514564e7E4AeBd1bA6cA52e3"
+  }
+}
